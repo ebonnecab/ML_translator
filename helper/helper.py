@@ -4,6 +4,7 @@ import unicodedata
 from unicodedata import normalize
 import nltk
 from nltk.tokenize import word_tokenize
+from pickle import dump
 
 #function to read text file
 def get_text(file):
@@ -40,7 +41,7 @@ def remove_punct(line):
     return line
 
 def norma_uni(line):
-    line = normalize('NFD', line).encode('ascii', 'ignore')
+    line = normalize("NFD", line).encode("ascii", "ignore")
     line = line.decode('UTF-8')
     return line
 
@@ -48,10 +49,13 @@ def lower_case(line):
     line = [word.lower() for word in line]
     return line
 
-def clean_txt(lines):
+def non_print(line):
+    re_print = re.compile("[^%s]" % re.escape(string.printable))
+    line = [re_print.sub("", word) for word in line]
+    return line
 
+def clean_txt(lines):
     cleaned = []
-    
     for pair in lines:
         clean_pair = []
         for line in pair:
@@ -59,9 +63,13 @@ def clean_txt(lines):
             line = split_line(line)
             line = lower_case(line)
             line = remove_punct(line)
+            line = non_print(line)
             clean_pair.append(" ".join(line))
         cleaned.append(clean_pair)
     return cleaned
+
+def save_words(clean_txt, filename):
+    dump(clean_txt, open(filename, 'wb'))
 
 if __name__ == "__main__":
     
@@ -80,6 +88,8 @@ if __name__ == "__main__":
     type = what_type(pairs)
     print(type)
 
-    strip = clean_txt(pairs)
-    print(strip[0:50])
+    clean = clean_txt(pairs)
+    # print(clean[0:50])
     # print(all_words)
+
+    # clean_data = save_words(clean, 'engl-fra.pickle')
