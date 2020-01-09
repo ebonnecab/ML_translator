@@ -4,7 +4,7 @@ import unicodedata
 from unicodedata import normalize
 import nltk
 from nltk.tokenize import word_tokenize
-from pickle import dump
+from pickle import dump, load
 
 #function to read text file
 def get_text(file):
@@ -71,25 +71,16 @@ def clean_txt(lines):
 def save_words(clean_txt, filename):
     dump(clean_txt, open(filename, 'wb'))
 
+
+def load_clean(filename):
+    data = load(open(filename, 'rb'))
+    return data
+
 if __name__ == "__main__":
-    
-    #previewing file
+
     text = get_text('../datasets/external/fra1.txt')
-    #print total count of sequences
-    print(text.count('') +1)
-    #print first few lines of text
-    # print(text[1:2000])
-    #print last few lines of text
-    # print(text[490000:500000])
     pairs = to_pairs(text)
-    # print(pairs[0:50])
-    # min_max = max_min_length(pairs)
-    # print(min_max)
+    min_max = max_min_length(pairs)
     type = what_type(pairs)
-    print(type)
-
     clean = clean_txt(pairs)
-    # print(clean[0:50])
-    # print(all_words)
-
     # clean_data = save_words(clean, 'engl-fra.pickle')
