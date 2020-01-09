@@ -4,7 +4,9 @@ import unicodedata
 from unicodedata import normalize
 import nltk
 from nltk.tokenize import word_tokenize
-from pickle import dump, load
+from pickle import dump
+from pickle import load
+import numpy as np
 
 #function to read text file
 def get_text(file):
@@ -69,13 +71,21 @@ def clean_txt(lines):
     return cleaned
 
 def save_words(clean_txt, filename):
-    dump(clean_txt, open(filename, 'wb'))
+    with open(filename, 'wb') as f:
+        dump(clean_txt, f)
 
 
 def load_clean(filename):
-    data = load(open(filename, 'rb'))
+    with open(filename, 'rb') as f:
+        data = load(f)
     return data
 
+def reduce_size(raw_data):
+    num_sentences = 15000
+    data = raw_data[0:num_sentences]
+    data = np.array(data)
+    return data
+    
 if __name__ == "__main__":
 
     text = get_text('../datasets/external/fra1.txt')
@@ -84,3 +94,8 @@ if __name__ == "__main__":
     type = what_type(pairs)
     clean = clean_txt(pairs)
     # clean_data = save_words(clean, 'engl-fra.pickle')
+    raw_data = load_clean('../datasets/interim/engl-fra.pickle')
+    # print(raw_data)
+
+    small_data = reduce_size(raw_data)
+    print(small_data[0:100])
