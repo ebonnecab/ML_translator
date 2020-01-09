@@ -14,21 +14,18 @@ def get_text(file):
 #return text from file
         return data
 
-def to_pairs(txt):
-    
+def to_pairs(txt):   
     lines = txt.strip().split('\n')
     pairs = [pairs.split('\t') for pairs in lines]
 
     return pairs
 
-def max_min_length(pairs):
-    
+def max_min_length(pairs):    
     for sentence in pairs:
         length = [len(s.split()) for s in sentence]
     return min(length), max(length)
 
 def what_type(pairs):
-
     for sentence in pairs:
         dt = [type(s) for s in sentence]
     return dt
@@ -37,14 +34,19 @@ def split_line(line):
     line = line.split()
     return line 
 
-def remove_punct(line):
-    
+def remove_punct(line):    
     table = str.maketrans("", "", string.punctuation)
-
     line = [word.translate(table) for word in line]
-
     return line
 
+def norma_uni(line):
+    line = normalize('NFD', line).encode('ascii', 'ignore')
+    line = line.decode('UTF-8')
+    return line
+
+def lower_case(line):
+    line = [word.lower() for word in line]
+    return line
 
 def clean_txt(lines):
 
@@ -53,7 +55,9 @@ def clean_txt(lines):
     for pair in lines:
         clean_pair = []
         for line in pair:
+            line = norma_uni(line)
             line = split_line(line)
+            line = lower_case(line)
             line = remove_punct(line)
             clean_pair.append(" ".join(line))
         cleaned.append(clean_pair)
