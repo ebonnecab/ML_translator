@@ -90,10 +90,10 @@ def shuffle_rand(data):
     return shuffle(data)
 
 def create_train(data):
-    return data[:1200]
+    return data[:12000]
 
 def create_test(data):
-    return data[1200:]
+    return data[12000:]
 
 
 if __name__ == "__main__":
