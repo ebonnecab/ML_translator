@@ -2,8 +2,6 @@ import string
 import re
 import unicodedata
 from unicodedata import normalize
-import nltk
-from nltk.tokenize import word_tokenize
 from pickle import dump
 from pickle import load
 import numpy as np
@@ -96,6 +94,7 @@ def create_train(data):
 
 def create_test(data):
     return data[1200:]
+
 
 if __name__ == "__main__":
 
