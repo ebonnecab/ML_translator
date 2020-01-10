@@ -7,6 +7,8 @@ from nltk.tokenize import word_tokenize
 from pickle import dump
 from pickle import load
 import numpy as np
+from numpy.random import rand
+from numpy.random import shuffle
 
 #function to read text file
 def get_text(file):
@@ -85,7 +87,16 @@ def reduce_size(raw_data):
     data = raw_data[0:num_sentences]
     data = np.array(data)
     return data
-    
+
+def shuffle_rand(data):
+    return shuffle(data)
+
+def create_train(data):
+    return data[:1200]
+
+def create_test(data):
+    return data[1200:]
+
 if __name__ == "__main__":
 
     text = get_text('../datasets/external/fra1.txt')
@@ -95,7 +106,9 @@ if __name__ == "__main__":
     clean = clean_txt(pairs)
     # clean_data = save_words(clean, 'engl-fra.pickle')
     raw_data = load_clean('../datasets/interim/engl-fra.pickle')
-    # print(raw_data)
-
     small_data = reduce_size(raw_data)
-    print(small_data[0:100])
+    train = create_train(small_data)
+    test = create_test(small_data)
+    # small_save  = save_words(small_data, 'eng-fra-both.pickle')
+    save_train = save_words(train, 'eng-fra-train.pickle')
+    save_test = save_words(test, 'eng-fra-test.pickle')
