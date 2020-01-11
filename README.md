@@ -1,12 +1,11 @@
-<h1 align="center"><b>D.S. Project</b>: <i>Template Repository</i></h1>
+<h1 align="center"><b>D.S. Project</b>: <i>Machine Translator</i></h1>
 
-`TODO`: **Be sure to replace the badge links to your own personal project links so they're up-to-date!**
 
 <p align="center">
 <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
 <a href="https://docs.python.org/3/index.html"><img src="https://img.shields.io/badge/python-3.6-blue.svg"/></a>
-<a href="https://github.com/AakashSudhakar/ds-project-maker/commits/master"><img src="https://img.shields.io/github/last-commit/AakashSudhakar/ds-project-maker.svg?style=flat"/></a>
-<a href="https://github.com/AakashSudhakar/ds-project-maker"><img src="https://img.shields.io/github/repo-size/AakashSudhakar/ds-project-maker.svg?style=flat"/></a>
+<a href="https://github.com/ebonnecab/ML_translator/commits/master"><img src="https://img.shields.io/github/last-commit/AakashSudhakar/ds-project-maker.svg?style=flat"/></a>
+<a href="https://github.com/ebonnecab/ML_translator"><img src="https://img.shields.io/github/repo-size/AakashSudhakar/ds-project-maker.svg?style=flat"/></a>
 <a href="https://github.com/AakashSudhakar/ds-project-maker/releases"><img src="https://img.shields.io/github/release/AakashSudhakar/ds-project-maker.svg?style=flat"/></a>
 
 
