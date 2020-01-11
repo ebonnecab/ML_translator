@@ -28,6 +28,7 @@ ds-project-template-repository
 │   └───processed
 │
 └───models
+│   │   model.h5
 │
 └───notebooks
 │   │   03-LSTM_Model.ipynb
