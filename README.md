@@ -7,7 +7,7 @@
 
 A simple Machine Translator that uses Deep Learning to accurately translate bilingual sentence pairs. I chose this project to deepen my understanding of text preprocessing, machine learning pipelines, and building neural networks.
 
-I trained my model using data from [English-French Sentence Pairs](https://www.kaggle.com/zeeshanshaik75/language-translationenglish-to-french/data#), however I plan to expand the model to use with multiple languages and a lot more data. 
+I trained my model using data from [English-French Sentence Pairs](https://www.kaggle.com/zeeshanshaik75/language-translationenglish-to-french/data#), however I plan to expand the model to use with multiple languages and a lot more data. Once I have a robust model, I plan to build a basic mobile application for or interface for other scientists to use.
 
 ## Project Hierarchy
 
@@ -36,7 +36,7 @@ ds-project-template-repository
 │   │   function.py
 |
 └───references
-│   
+│   │   notes.ipynb
 └───reports
 │   │   
 │   └───figures
@@ -53,7 +53,8 @@ General dependencies, such as `NumPy` and `Pandas`, are listed below.
 * [Pandas](https://github.com/pandas-dev/pandas)
 * [MatPlotLib](https://github.com/matplotlib/matplotlib)
 * [Seaborn](https://github.com/mwaskom/seaborn)
-
+* [Keras](https://keras.io/)
+* [NLTK](https://www.nltk.org/)
 
 ## Credits
 
@@ -61,9 +62,7 @@ General dependencies, such as `NumPy` and `Pandas`, are listed below.
 
 Thanks to the [Make School](https://makeschool.com/) community of students and professionals seeking to learn software engineering and data science for real-world applications. 
 
-Special thanks to [Alan Davis](https://github.com/neptunius), [Mike Kane](https://github.com/mike-kane), and [Milad Toutounchian](https://github.com/miladtoutounchian) for teaching me modern data science and computer science skills to be able to both teach others and make an impact in the field of applied biology (my own personal domain-of-interest). 
-
-Credits to the [Cookie Cutter project](https://github.com/cookiecutter/cookiecutter) for inspiring me to create a similar structural tool for learning and training data science fellows at Make School to formulate better and more enriched projects without wasting too much time on hierarchical setup. 
+Special thanks to [Aakash Sudhakar](https://github.com/aakashsudhakar) for building this amazing structural tool. 
 
 ## License
 
@@ -73,5 +72,5 @@ The content of this project itself and the source code used to format and displa
 
 `TODO`: **Replace my name and in-line professional media account below with your own relevant info!**
 
-<p align="center">This project is constructed and maintained by <strong><a href="https://makeschool.com/portfolio/kash">Aakash Sudhakar</a></strong>.
+<p align="center">This project is constructed and maintained by <strong><a href="https://makeschool.com/portfolio/EbonneCabarrus">Ebonne Cabarrus</a></strong>.
 </p>
