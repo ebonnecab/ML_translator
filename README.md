@@ -45,8 +45,6 @@ ds-project-template-repository
 
 ## Dependencies
 
-`TODO`: **List any external dependencies for your project here, including relevant in-line links as needed.** 
-
 General dependencies, such as `NumPy` and `Pandas`, are listed below. 
 
 * [NumPy](https://github.com/numpy/numpy)
@@ -58,8 +56,6 @@ General dependencies, such as `NumPy` and `Pandas`, are listed below.
 
 ## Credits
 
-`TODO`: **Replace these statements with your own credits and acknowledgements, or remove this section entirely!**
-
 Thanks to the [Make School](https://makeschool.com/) community of students and professionals seeking to learn software engineering and data science for real-world applications. 
 
 Special thanks to [Aakash Sudhakar](https://github.com/aakashsudhakar) for building this amazing structural tool. 
@@ -69,8 +65,6 @@ Special thanks to [Aakash Sudhakar](https://github.com/aakashsudhakar) for build
 The content of this project itself and the source code used to format and display that content are both licensed under the MIT license.
 
 ---
-
-`TODO`: **Replace my name and in-line professional media account below with your own relevant info!**
 
 <p align="center">This project is constructed and maintained by <strong><a href="https://makeschool.com/portfolio/EbonneCabarrus">Ebonne Cabarrus</a></strong>.
 </p>
