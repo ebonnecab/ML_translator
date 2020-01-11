@@ -5,7 +5,7 @@
 
 ## Description
 
-A simple Machine Translator that uses Deep Learning to accurately translate bilingual sentence pairs. I chose this project to deepen my understanding of text preprocessing, machine learning pipelines, and building neural networks.
+A simple Machine Translator that uses Deep Learning to accurately translate bilingual sentence pairs. I chose this project to deepen my understanding of text preprocessing, natural language processing, machine learning pipelines, and building neural networks.
 
 I trained my model using data from [English-French Sentence Pairs](https://www.kaggle.com/zeeshanshaik75/language-translationenglish-to-french/data#), however I plan to expand the model to use with multiple languages and a lot more data. Once I have a robust model, I plan to write a report on my journey and build a basic mobile application for or interface for other scientists to use.
 
